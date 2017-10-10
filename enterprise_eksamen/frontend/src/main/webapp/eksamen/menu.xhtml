@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+>
+
+<ui:composition template="layout.xhtml">
+
+    <ui:define name="title">Menu</ui:define>
+
+
+    <ui:define name="content">
+
+
+        <c:set var="allDishes" value="#{menuController.dishes}"/>
+        <c:choose>
+            <c:when test="#{allDishes.size() > 0}">
+
+                <h:form id="dishSelectForm">
+                    <h:inputText value="#{menuController.dateString}" id="date"/>
+                    <h:commandButton value="Create" action="#{menuController.createMenu()}" id="createButton">
+                    </h:commandButton>
+
+
+                    <h:dataTable value="#{allDishes}" var="dish" border="1" id="selectDishTable">
+
+                        <h:column>
+                            <f:facet name="header">Name</f:facet>
+                            #{dish.name}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Include</f:facet>
+                            <h:selectBooleanCheckbox value="#{menuController.dishCheckMap[dish]}" id="include">
+
+                            </h:selectBooleanCheckbox>
+                        </h:column>
+
+                    </h:dataTable>
+                </h:form>
+
+            </c:when>
+
+            <c:otherwise>
+                <h2> No content yet</h2>
+            </c:otherwise>
+
+
+        </c:choose>
+    </ui:define>
+</ui:composition>
+
+</html>

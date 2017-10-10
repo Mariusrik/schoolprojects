@@ -1,0 +1,121 @@
+{
+  "resturants" : {
+    "resturant1" : {
+      "coordinates" : {
+        "latitude" : 59.917188,
+        "longitude" : 10.753417
+      },
+      "description" : "Cozy, laid back atmosphere in a central location with 20 beers on tap, many of them brewed onsite. Limited (but inexpensive) food options to go with the beer.",
+      "image" : "markerImages/crowbarbryggeri.jpg",
+      "name" : "Crowbar & Bryggeri"
+    },
+    "resturant10" : {
+      "coordinates" : {
+        "latitude" : 59.918909,
+        "longitude" : 10.759647
+      },
+      "description" : "Great meat, good atmosphere, reasonable prices. If you are looking for a good place to eat steak in Oslo, look no further.",
+      "image" : "markerImages/trancherentrecote.jpg",
+      "name" : "Trancher Entrecôte"
+    },
+    "resturant11" : {
+      "coordinates" : {
+        "latitude" : 59.91935,
+        "longitude" : 10.759647
+      },
+      "description" : "Classic North Indian dishes served in established restaurant, with carved screens & traditional art.",
+      "image" : "markerImages/newanarkali.jpg",
+      "name" : "New Anarkali"
+    },
+    "resturant2" : {
+      "coordinates" : {
+        "latitude" : 59.917599,
+        "longitude" : 10.754147
+      },
+      "description" : "Late-opening, cozy, dark wood bar/restaurant with outdoor area, for burgers, burritos & BBQ dishes.",
+      "image" : "markerImages/cafesara.jpg",
+      "name" : "Cafe Sara"
+    },
+    "resturant3" : {
+      "coordinates" : {
+        "latitude" : 59.917016,
+        "longitude" : 10.753119
+      },
+      "description" : "Most authentic tacos in oslo.",
+      "image" : "markerImages/tacorepublica.jpg",
+      "name" : "Taco República"
+    },
+    "resturant4" : {
+      "coordinates" : {
+        "latitude" : 59.917802,
+        "longitude" : 10.753689
+      },
+      "description" : "Want a burrito or salad bowl look no further than here! Great price for a filling and delicious burrito! They also have beer here! It's a busy spot but very much recommended!",
+      "image" : "markerImages/freddyfuego.jpg",
+      "name" : "Freddy Fuego Burrito Bar"
+    },
+    "resturant5" : {
+      "coordinates" : {
+        "latitude" : 59.916821,
+        "longitude" : 10.753356
+      },
+      "description" : "Best pho in town! Great cozy restaurant with great variety within Vietnamese / Asian food.",
+      "image" : "markerImages/dalatcafe.jpg",
+      "name" : "Dalat cafe Tran"
+    },
+    "resturant6" : {
+      "coordinates" : {
+        "latitude" : 59.915493,
+        "longitude" : 10.755778
+      },
+      "description" : "This place is a gem when it comes to cheap and good fast-food. The portion is big, and the meals are relatively cheap.",
+      "image" : "markerImages/grytelokket.jpg",
+      "name" : "Grytelokket Avd. Storgata"
+    },
+    "resturant7" : {
+      "coordinates" : {
+        "latitude" : 59.914325,
+        "longitude" : 10.754058
+      },
+      "description" : "Very good sushi and very reasonably priced compared to other sushi restaurants",
+      "image" : "markerImages/seashushi.jpg",
+      "name" : "Sea Sushi Bar AS"
+    },
+    "resturant8" : {
+      "coordinates" : {
+        "latitude" : 59.918758,
+        "longitude" : 10.758263
+      },
+      "description" : "Relaxed restaurant with wooden furniture & stripped floors, for classic & modern Spanish tapas.",
+      "image" : "markerImages/delikatessen.jpg",
+      "name" : "Delicatessen Grünerløkka"
+    },
+    "resturant9" : {
+      "coordinates" : {
+        "latitude" : 59.918425,
+        "longitude" : 10.760237
+      },
+      "description" : "Nice pub in an old beer cellar. Serves beers that they brew themselves , together with an very good beer selection from others.",
+      "image" : "markerImages/schouskjelleren.jpg",
+      "name" : "Schouskjelleren Mikrobryggeri"
+    }
+  },
+  "roomReservations" : {
+    "KPMPrGYRjwSFNjz9dS0r9D9aui53" : {
+      "roomNumber" : "419"
+    },
+    "vGizX1N2jkS41yYjK4KlwBdiXEP2" : {
+      "roomNumber" : "507"
+    }
+  },
+  "users" : {
+    "KPMPrGYRjwSFNjz9dS0r9D9aui53" : {
+      "email" : "test@testmail.com",
+      "roomNumber" : "419"
+    },
+    "vGizX1N2jkS41yYjK4KlwBdiXEP2" : {
+      "email" : "rikmar15@student.westerdals.no",
+      "roomNumber" : ""
+    }
+  }
+}

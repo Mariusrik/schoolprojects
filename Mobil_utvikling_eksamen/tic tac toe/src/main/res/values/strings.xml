@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="user_one">Player 1</string>
+    <string name="user_two">Player 2</string>
+
+    <string name="welcome_text">Welcome to Tic Tac Toe!</string>
+    <string name="start_normal_game">Play 3x3</string>
+    <string name="start5x5_game">Play 5x5</string>
+    <string name="statistics">Statistics</string>
+    <string name="language">Change Language</string>
+    <string name="info_text">Write the name of the two players and start the game!</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="restart_game">Play Again!</string>
+    <string name="name">Name</string>
+    <string name="winns">Winnings</string>
+    <string name="games_lost">Games Lost</string>
+    <string name="games_won">Games Won</string>
+    <string name="draw_message">Draw!</string>
+    <string name="won_against">won against</string>
+    <string name="not_empty_error">Cannot be empty</string>
+    <string name="more_than_2_characters_error">Must be 2 ore more characters.</string>
+    <string name="next_turn_is">Next turn is:</string>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home_button" />
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/ic_map"
+            android:title="@string/maps_button" />
+        <item
+            android:id="@+id/nav_roomservice"
+            android:icon="@drawable/ic_restaurant_menu"
+            android:title="@string/roomservice_button" />
+
+    </group>
+
+    <item android:title="@string/options">
+        <menu>
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/ic_sign_out"
+                android:title="@string/log_out" />
+        </menu>
+    </item>
+
+</menu>

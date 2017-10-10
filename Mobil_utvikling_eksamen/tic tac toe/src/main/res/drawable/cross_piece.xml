@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- makes the rectangle have the same margin as a button -->
+    <item
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp">
+        <shape
+
+            android:shape="rectangle">
+            <solid android:color="@color/colorLightBlueButton"></solid>
+
+            <corners
+                android:radius="3dp" />
+        </shape>
+    </item>
+    <item
+        android:bottom="15dp"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="15dp">
+
+        <rotate
+            android:fromDegrees="50"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="-90">
+            <shape android:shape="line">
+                <stroke
+                    android:width="10dp"
+                    android:color="@android:color/white" />
+            </shape>
+        </rotate>
+    </item>
+    <item
+        android:bottom="15dp"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="15dp">
+
+        <rotate
+            android:fromDegrees="130"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="-90">
+            <shape android:shape="line">
+                <stroke
+                    android:width="10dp"
+                    android:color="@android:color/white" />
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list>

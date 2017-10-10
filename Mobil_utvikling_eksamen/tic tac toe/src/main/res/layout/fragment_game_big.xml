@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mariu.appliksjon1.MainActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:id="@+id/gameHeader"
+        android:textSize="30sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tableLayout">
+
+
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/gameButton1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="0.4"
+                android:background="@drawable/board_button"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="1.4"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton3"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="2.4"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton4"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="3.4"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton5"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="4.4"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/gameButton6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="0.3"
+                android:background="@drawable/board_button"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="1.3"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton8"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="2.3"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton9"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="3.3"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton10"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="4.4"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/gameButton11"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="0.2"
+                android:background="@drawable/board_button"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton12"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="1.2"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton13"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="2.2"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton14"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="3.2"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton15"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="4.2"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/gameButton16"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="0.1"
+                android:background="@drawable/board_button"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton17"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="1.1"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton18"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="2.1"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton19"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="3.1"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton20"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="4.1"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/gameButton21"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="0.0"
+                android:background="@drawable/board_button"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton22"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="1.0"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton23"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="2.0"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton24"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="3.0"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/gameButton25"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:tag="4.0"
+                android:background="@drawable/board_button"
+                android:onClick="onClick"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <ViewSwitcher
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/buttonSwitcher"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_one"
+                android:textSize="20sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/player1TextView"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_two"
+                android:textSize="20sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/player2TextView"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/restart_game"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorLightestBlueButton"
+                android:onClick="reStartBigGame"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_menu"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorLightestBlueButton"
+                android:onClick="openMainMenu"
+                />
+        </LinearLayout>
+
+    </ViewSwitcher>
+
+
+
+
+
+</RelativeLayout>

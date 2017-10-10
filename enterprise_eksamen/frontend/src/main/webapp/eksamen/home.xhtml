@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+>
+
+<ui:composition template="layout.xhtml">
+
+    <ui:define name="title">MyCantina Home Page</ui:define>
+
+
+    <ui:define name="content">
+
+        <h:link value="Link to Dishes" outcome="/eksamen/dishes.jsf" id="dishLink"/>
+        <br/>
+        <h:link value="Link to Menu" outcome="/eksamen/menu.jsf" id="menuLink"/>
+        <hr/>
+
+
+        <c:set var="menu" value="#{homeController.currentMenu}"/>
+
+        <c:choose>
+
+            <c:when test="#{menu != null || menu.dishes.size > 0 }">
+
+                <c:set var="currenMenuDishes" value="#{menu.dishes}"/>
+
+                <h:form id="defaultMenuLinkForm">
+                    <h:commandLink value="Current Menu" action="#{homeController.getDefaultMenu}" id="defaultMenu"/>
+                </h:form>
+
+                <c:set var="nextmenu" value="#{homeController.getNextMenu(menu.date)}"/>
+                <c:if test="#{nextmenu != null}">
+                    <h:form id="nextMenuLinkForm">
+                        <h:commandLink value="Next #{homeController.getFormattedDate(nextmenu.date)}"
+                                       action="#{homeController.setNextMenu(menu.date)}" id="nextMenu"/>
+                    </h:form>
+                </c:if>
+
+                <c:set var="previousmenu" value="#{homeController.getPreviousMenu(menu.date)}"/>
+                <c:if test="#{previousmenu != null}">
+                    <h:form id="previousMenuLinkForm">
+                        <h:commandLink value="Prevous  #{homeController.getFormattedDate(previousmenu.date)}"
+                                       action="#{homeController.setPrevousMenu(menu.date)}" id="previousMenu"/>
+                    </h:form>
+                </c:if>
+                <h4 id="currentMenuDate">Menu for #{homeController.getFormattedDate(menu.date)}</h4>
+
+                <h:dataTable value="#{currenMenuDishes}" var="dish" border="1" id="dishTable">
+
+                    <h:column>
+                        <f:facet name="header">Name</f:facet>
+                        #{dish.name}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Description</f:facet>
+                        #{dish.description}
+                    </h:column>
+
+                </h:dataTable>
+
+            </c:when>
+
+            <c:otherwise>
+                <h2> No content yet</h2>
+            </c:otherwise>
+        </c:choose>
+
+
+    </ui:define>
+
+</ui:composition>
+</html>
