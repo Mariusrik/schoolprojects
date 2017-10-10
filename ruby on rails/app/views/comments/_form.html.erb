@@ -1,0 +1,27 @@
+<div id="comments message" ></div>
+<%= form_with(model: comment, :remote => true) do |form| %>
+  <% if comment.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <p><strong><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</strong></p>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <br>
+    <%= form.text_area :content, :rows => 5, style: 'width:100%;', class: 'comment_content form-control' %>
+  </div>
+
+    <%= form.hidden_field :user_id, id: :comment_user_id %>
+    <%= form.hidden_field :book_id, id: :comment_book_id %>
+
+  <div class="actions">
+    <%= form.submit :class => 'btn btn-success' %>
+  </div>
+<% end %>

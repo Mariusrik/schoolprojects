@@ -1,0 +1,30 @@
+<%= form_with(model: for_sale, local: true) do |form| %>
+    <% if for_sale.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <h4><%= pluralize(for_sale.errors.count, "error") %> prohibited this for_sale from being saved:</h4>
+
+          <ul>
+            <% for_sale.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p>
+      <%= form.label :price %>
+      <%= form.text_field :price , :class=>"form-control limit-form-width"%>
+    </p>
+
+    <p>
+      <%= form.label 'Contact information' %>
+      <%= form.text_area :contact , :class=>"form-control", :rows=>"5"%>
+    </p>
+
+      <%= form.hidden_field :book_id %>
+
+      <%= form.hidden_field :user_id%>
+
+    <%= form.submit 'Register book for sale', :class => 'btn btn-default', :id => 'submit_sell_book' %>
+
+<% end %>

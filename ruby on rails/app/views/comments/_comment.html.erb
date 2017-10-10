@@ -1,0 +1,21 @@
+<div class="panel panel-default medium-margin-top" id="comment<%=comment.id%>">
+  <div class="panel-heading">
+    <h3 class="panel-title"> <%= comment.user.name %> </h3>
+  </div>
+  <div class="panel-body">
+    <p><%= comment.content %> </p>
+    <p>
+      <small> <%= comment.created_at %> </small>
+    </p>
+    <% if current_moderator %>
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: {confirm: 'Are you sure you want to delete this comment?' }, :remote => true %></td>
+    <% elsif current_user && current_user.id == comment.user_id %>
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: {confirm: 'Are you sure you want to delete this comment?'}, :remote => true %></td>
+    <% end %>
+    <table>
+
+    </table>
+    </div>
+</div>

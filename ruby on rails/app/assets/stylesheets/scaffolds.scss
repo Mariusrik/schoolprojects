@@ -1,0 +1,110 @@
+/*body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+*/
+body{
+  padding-top: 70px;
+}
+
+.modal-backdrop {
+  z-index: 0;
+}
+
+
+.glyphicon-star-empty:hover{
+  color: #ffc244;
+}
+
+.border_bottom{
+  border-bottom: solid 1px #c8c8c8;
+  padding: 0px 0px 5px 0px;
+}
+
+.book-size{
+  margin-top: 10px;
+  height: 155px;
+  max-width: 110px;
+}
+.medium-margin-top{
+  margin-top: 20px;
+}
+.medium-margin-bottom{
+  margin-bottom: 20px;
+}
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+.limit-form-width{
+  max-width: 300px;
+}
+
+a {
+  color: #000;
+  cursor: pointer;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: rgba(255, 0, 0, 0.6);
+  display: table;
+  border-radius: 5px;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid rgba(255, 0, 0, 0.6);
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+
+}
+
+label {
+  display: block;
+}
+
+.reduce-top-margin{
+  margin-top: 0px;
+}

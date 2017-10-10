@@ -1,0 +1,32 @@
+<%= form_tag sessions_path do %>
+<!-- Modal -->
+<div class="modal fade" id="login_modal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Log in</h4>
+      </div>
+      <div class="modal-body">
+        <div class="field limit-form-width">
+          <%= label_tag :email %>
+          <%= text_field_tag :email, params[:email], :class => 'form-control' %>
+        </div>
+
+        <div class="field limit-form-width">
+          <%= label_tag :password %>
+          <%= password_field_tag :password_digest, nil, class:'form-control' %>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <%= submit_tag 'Log in', :class => 'btn btn-default', :id => 'submit_login' %>
+      </div>
+    </div>
+
+  </div>
+</div>
+<% end %>
+

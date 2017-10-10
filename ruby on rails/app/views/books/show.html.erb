@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+<div class="well well-lg">
+
+  <h1>
+    <%= @book.title %>
+  </h1>
+
+  <p>
+    <%= @book.description %>
+  </p>
+
+  <p>
+    <%= image_tag @book.image.large.url %>
+  </p>
+
+  <p>
+    <% @book.categories.each do |cat| %>
+        <span class="label label-primary"><%= cat.name %></span>
+    <% end %>
+  </p>
+
+
+  <button type="button" class="btn btn-info " data-collapse-group="collapseButtons" data-toggle="collapse" data-target="#comments_collapse<%= @book.id %>">(<b id="comment_count_<%= @book.id %>"><%= @book.comments.count %></b>)
+    Book comments <b class="caret"></b></button>
+
+  <button type="button" class="btn btn-success <%= 'btn-danger' if @book.for_sales.count <= 0 %>" data-collapse-group="collapseButtons" data-toggle="collapse" data-target="#collapse<%= @book.id %>">(<b id="book_count_<%= @book.id %>"><%= @book.for_sales.count %></b>)
+    Books for sale <b class="caret"></b></button>
+
+  <% if current_user %>
+      <button type="button" class="btn btn-success" id="sell_book_btn">Sell this book</button>
+  <% end %>
+
+  <div id="collapse<%= @book.id %>" class="panel-collapse collapse ">
+    <br>
+    <table class="table">
+      <%= render :partial => 'for_sales/for_sale', collection: @book.for_sales %>
+    </table>
+  </div>
+
+  <!-- comments field -->
+  <div id="comments_collapse<%= @book.id %>" class="panel-collapse collapse ">
+    <div id='com<%= @book.id %>'>
+      <%= render :partial => 'comments/comment', collection: @book.comments %>
+    </div>
+
+    <% if current_user %>
+        <%= render 'comments/form', comment: Comment.new(book_id: @book.id, :user_id => current_user.id) %>
+    <% end %>
+  </div>
+
+</div><!-- end well -->
+
+<% if current_user %>
+    <div class="modal fade" id="sell_book_modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Sell book</h4>
+          </div>
+          <div class="modal-body">
+            <%= render 'for_sales/form', for_sale: ForSale.new(book_id: @book.id, user_id: current_user.id) %>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<% if current_admin %>
+    <%= link_to 'Edit', edit_book_path(@book) %> |
+<% end %>
+<%= link_to 'Back', _back_url %>

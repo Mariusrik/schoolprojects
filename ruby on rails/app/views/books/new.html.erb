@@ -1,0 +1,10 @@
+<div class="page-header">
+  <h1>New Book</h1>
+</div>
+
+<% if current_user %>
+<%= render 'form', book: @book %>
+
+<%= link_to 'Back', _back_url %>
+
+<% end %>

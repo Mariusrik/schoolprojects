@@ -1,0 +1,60 @@
+<div class="media">
+  <h3 class="media-heading text-primary border_bottom"><%= book.title %>
+    <% if current_user %>
+        <small id="rating">
+          <% form_id = "book_#{book.id}_rating" %>
+          <%= form_for book.ratings.find_by_user_id(current_user.id) || book.ratings.create, :html => {:id => form_id, :class => 'star_rating_form'}, remote: true do |f| %>
+              <%= f.hidden_field :book_id %>
+              <%= f.hidden_field :score, :id => "#{form_id}_stars" %>
+          <% end %>
+          <% (1..6).each do |i| %>
+              <span class="glyphicon glyphicon-star-empty" data-stars="<%= i %>" data-form-id="<%= form_id %>" id="<%= "#{form_id}_#{i}" %>"></span>
+          <% end %>
+        </small>
+    <% end %>
+  </h3>
+  <div class="media-left">
+    <a href="/books/<%= book.id %>">
+      <%= image_tag book.image.large.url, :class => "book-size" %>
+    </a>
+  </div>
+  <div class="media-body">
+
+    <p></p>
+    <p id="book-content-<%= book.id %>">
+      <% if book.description.length > 550 %>
+          <%= book.description.truncate_words(90) %>
+          <%= link_to 'Read more', '', class: "read-more-#{book.id}" %>
+          <script>
+              $('.read-more-<%= book.id %>').on('click', function (e) {
+                  e.preventDefault();
+                  $(this).parent().html('<%= escape_javascript book.description %>')
+              });
+          </script>
+      <% else %>
+          <%= book.description %>
+      <% end %>
+    </p>
+    <% book.categories.each do |cat| %>
+        <%= link_to cat.name, home_path(:searchcategories => cat.id), :class=>"label label-primary", :style=>"color:#ffffff", :method => "get"%>
+    <% end %>
+
+
+
+    <b id="average_book_<%= "#{book.id}_rating" %>">
+    <span class="label label-default ">Average rating:
+      <%= number_with_precision(get_avg_rating(book.id), precision: 1) %>
+      <b class="glyphicon glyphicon-star text-star"></b>
+    </span></b>
+    <table class="pull-right">
+      <tr>
+        <td><%= link_to 'Show details', book %></td>
+        <% if current_admin %>
+            <td><%= link_to 'Edit', edit_book_path(book) %></td>
+            <td><%= link_to 'Delete', book, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <% end %>
+
+      </tr>
+    </table>
+  </div>
+</div>

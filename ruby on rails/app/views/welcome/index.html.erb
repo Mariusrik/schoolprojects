@@ -1,0 +1,79 @@
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %> alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button><%= value %></div>
+<% end %>
+
+<div class="page-header reduce-top-margin">
+
+  <div class="row">
+    <div class="col-md-3">
+    </div><!-- end col-md-3 -->
+    <div class="col-md-9">
+      <h1><%= image_tag 'book_flat.ico', size: 50 %> Syllabus
+        <small>Share your book tips!</small>
+      </h1>
+    </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <h4>Categories</h4>
+
+    <ul class="list-group">
+
+      <% get_categories.each do |category| %>
+
+          <%= link_to home_path(:searchcategories => category.id), :class => "list-group-item" do %>
+              <%= category.name %>
+              <span class="badge"><%= category.books.count %></span>
+
+          <% end %>
+
+      <% end %>
+    </ul>
+  </div> <!-- End col-md-3 -->
+
+  <div class="col-md-9">
+
+    <!-- <div class="panel panel-default">-->
+    <div class="panel-body" id="content-panel">
+      <% @books.each do |book| %>
+          <div class="well well-lg">
+
+            <%= render :partial => 'books/book', object: book %>
+
+            <button type="button" data-collapse-group="collapseButtons" class="btn btn-info medium-margin-top" data-toggle="collapse" data-target="#collapse<%= book.id %>">(<b id="commentcount_<%= book.id %>"><%= book.comments.count %></b>)
+              Comments <b class="caret"></b></button>
+            <button type="button" data-collapse-group="collapseButtons" class="btn btn-success medium-margin-top <%= 'btn-danger' if book.for_sales.count <= 0 %>" data-toggle="collapse" data-target="#collapse_sales<%= book.id %>">(<b id="book_count_<%= book.id %>"><%= book.for_sales.count %></b>)
+              Books for sale <b class="caret"></b></button>
+            <!-- comments field -->
+            <div id="collapse<%= book.id %>" class="panel-collapse collapse ">
+              <div id='com<%= book.id %>'>
+                <%= render :partial => 'comments/comment', collection: book.comments %>
+              </div>
+
+              <% if current_user %>
+                  <%= render 'comments/form', comment: Comment.new(:book_id => book.id, :user_id => current_user.id) %>
+              <% end %>
+            </div>
+            <!-- sales field -->
+            <div id="collapse_sales<%= book.id %>" class="panel-collapse collapse ">
+              <br>
+              <table class="table">
+                <%= render :partial => 'for_sales/for_sale', collection: book.for_sales %>
+              </table>
+            </div>
+
+          </div><!-- end well -->
+          <hr>
+      <% end %>
+
+    </div>  <!-- end <div class="panel panel-default">-->
+
+    <%= will_paginate @books, renderer: BootstrapPagination::Rails %>
+  </div><!-- column 9 -->
+
+  <!--</div>-->
+</div>
+<!-- end of row -->

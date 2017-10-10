@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class="well">
+  <div class="page-header">
+    <h3>
+      <%= @user.name %>
+      <small>  <%= @user.email %>
+      </small>
+    </h3>
+  </div>
+
+  <p>
+    <span class="label label-default"><%= @user.user_profile %> </span>
+  </p>
+
+  <p>
+    <%= image_tag @user.image.large.url %>
+  </p>
+
+  <% if current_admin %>
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <%= link_to 'Back', users_path %>
+  <% else %>
+      <%= link_to 'Edit', edit_user_path(@user) %>
+  <% end %>
+</div>
+
+

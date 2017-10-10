@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>For Sales</h1>
+
+<table class ="table">
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Contact</th>
+      <th>User</th>
+      <th>Book</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @for_sales.each do |for_sale| %>
+      <tr>
+        <td><%= number_to_currency(for_sale.price, :unit => "kr ") %></td>
+        <td><%= for_sale.contact %></td>
+        <td><%= for_sale.user.name %></td>
+        <td><%= for_sale.book.title %></td>
+        <td><%= link_to 'Show', for_sale %></td>
+        <% if current_moderator || (current_user.id == for_sale.user_id) %>
+            <td><%= link_to 'Edit', edit_for_sale_path(for_sale) %></td>
+            <td><%= link_to 'Destroy', for_sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

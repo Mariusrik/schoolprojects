@@ -1,0 +1,13 @@
+<tbody>
+    <tr>
+      <td><%= for_sale.user.name %></td>
+      <td><%= number_to_currency(for_sale.price, :unit => "kr ") %></td>
+      <td><%= for_sale.contact %></td>
+      <td><%= for_sale.book.title %></td>
+      <td><%= link_to 'Show', for_sale %></td>
+      <% if (current_user && (current_user.id == for_sale.user_id)) || current_admin %>
+          <td><%= link_to 'Edit', edit_for_sale_path(for_sale) %></td>
+          <td><%= link_to 'Destroy', for_sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tr>
+</tbody>

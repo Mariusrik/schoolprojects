@@ -1,0 +1,10 @@
+var id = '#com<%= @comment.book_id %>'
+var comment_counter = document.getElementById('commentcount_<%=@comment.book_id %>');
+$(id).append("<%= j render @comment %>");
+$('#comment<%= @comment.id %>').hide().fadeIn(1000)
+$(".comment_content").val("");
+var x = $(comment_counter).text();
+var comment_number = parseInt(x, 10);
+comment_number++;
+comment_counter.innerHTML = comment_number;
+
