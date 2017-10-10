@@ -1,0 +1,6 @@
+Navn/Adresse/Alder
+VARCHAR/VARCHAR/INT
+128/128/3
+Donald/veien/60
+Anton/veito/50
+Dolly/veitre/23

@@ -1,0 +1,6 @@
+Navn/Adresse/Alder/status/klasse
+VARCHAR/VARCHAR/INT/VARCHAR/VARCHAR
+128/128/3/128/50
+Donald Duck/Uflaksveien 13/60/gift/teknologi
+Fetter Anton/Flakseveien 1/50/ugift/design
+Dolly Duck/Andebyg�rden 2/23/gift/musikk

@@ -1,0 +1,6 @@
+Navn/Adresse/Alder/status
+Hehe/VARCHAR/INT/VARCHAR
+128/128/3/128
+Donald Duck/Uflaksveien 13/60/gift
+Fetter Anton/Flakseveien 1/50/ugift
+Dolly Duck/Andebyg�rden 2/23/gift
